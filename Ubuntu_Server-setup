@@ -1,0 +1,37 @@
+#!/bin/bash
+wget https://raw.githubusercontent.com/m6jgj/Ubuntu_Server/main/bashrc-add
+cat bashrc-add >> .bashrc
+echo "Bashrc Done"
+echo ""
+mkdir .bin
+cd .bin
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/aip
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/lip
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/wip
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/update
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/check-my-net
+wget https://raw.githubusercontent.com/jaws316/Bash_Scripts/main/HTTPServer
+chmod 777 *
+cd
+echo "Bin Done"
+echo ""
+dpkg -l | grep -qw tmux || sudo apt install -yyq tmux
+dpkg -l | grep -qw nano || sudo apt install -yyq nano
+dpkg -l | grep -qw ncdu || sudo apt install -yyq ncdu
+dpkg -l | grep -qw htop || sudo apt install -yyq htop
+dpkg -l | grep -qw sshfs || sudo apt install -yyq sshfs
+dpkg -l | grep -qw speedtest-cli || sudo apt install -yyq speedtest-cli
+dpkg -l | grep -qw neofetch || sudo apt install -yyq neofetch
+dpkg -l | grep -qw net-tools || sudo apt install -yyq net-tools
+echo "Programs Insealled"
+echo ""
+neofetch
+cd .config/neofetch/
+wget https://raw.githubusercontent.com/jaws316/Ubuntu_Server/main/neofetch-config.conf
+cp config.conf config.conf.bk
+mv neofetch-config.conf config.conf
+cd
+rm bashrc-add
+rm Ubuntu_Server-setup
+echo "All Done"
+echo ""
