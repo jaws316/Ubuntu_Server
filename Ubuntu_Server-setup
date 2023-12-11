@@ -1,5 +1,5 @@
 #!/bin/bash
-wget https://raw.githubusercontent.com/m6jgj/Ubuntu_Server/main/bashrc-add
+wget https://raw.githubusercontent.com/jaws316/Ubuntu_Server/main/bashrc-add
 cat bashrc-add >> .bashrc
 echo "Bashrc Done"
 echo ""
