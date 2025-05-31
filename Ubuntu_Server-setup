@@ -23,7 +23,8 @@ dpkg -l | grep -qw sshfs || sudo apt install -yyq sshfs
 dpkg -l | grep -qw speedtest-cli || sudo apt install -yyq speedtest-cli
 dpkg -l | grep -qw neofetch || sudo apt install -yyq neofetch
 dpkg -l | grep -qw net-tools || sudo apt install -yyq net-tools
-dpkg -l | grep -qw cockpit ||sudo apt install -yyq cockpit
+dpkg -l | grep -qw cockpit || sudo apt install -yyq cockpit
+dpkg -i | grep -qw plocate || sudo apt install -yyq plocate
 echo "Programs Insealled"
 echo ""
 neofetch
